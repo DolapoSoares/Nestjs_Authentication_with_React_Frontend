@@ -3,10 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BlogModule } from './blog/blog.module';
+import * as dotenv from 'dotenv';
+dotenv.config()
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://dolapo:123dolapo@cluster0.g8mzn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    MongooseModule.forRoot(process.env.URI, {
       useNewUrlParser: true,
     }),
     BlogModule,
