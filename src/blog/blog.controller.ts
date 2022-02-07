@@ -48,7 +48,7 @@ export class BlogController {
   @Put('/edit')
   async editPost(
     @Res() res,
-    @Query('postID', new ValidateObjectId()) postID,
+    @Query('postID', new ValidateObjectId()) postID:string,
     @Body() createPostDTO: CreatePostDTO,
   ) {
     const editedPost = await this.blogService.editPost(postID, createPostDTO);

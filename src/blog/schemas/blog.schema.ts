@@ -6,7 +6,7 @@ export const BlogSchema = new mongoose.Schema({
         body: String,
         author: String,
         date_created: String,
+},{
+    versionKey:false
 })
 
-// 8TOgxHpw9P4mFxUrIAvCz8bXKz4JDKRC
-// uoWAb18IjcFTlHREiBW-VqrvmpvVJizKm3W7nE-gVZb_6yck291HIRCxWBvCJmus
