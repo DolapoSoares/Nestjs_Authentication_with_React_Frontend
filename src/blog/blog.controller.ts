@@ -21,7 +21,7 @@ export class BlogController {
 
   //Create a POST
   @Post('/post')
-  async addPost(@Res() res, @Body() create: CreatePostDTO) {
+  async addPost(@Res() res:any, @Body() create: CreatePostDTO) {
     const newPost = await this.blogService.addPost(create);
     return res.status(HttpStatus.OK).json({
       message: 'Submitted post successfully',
@@ -31,7 +31,7 @@ export class BlogController {
 
   // Get a post using a specific Id
   @Get('post/:postID')
-  async getPost(@Res() res, @Param('postID', new ValidateObjectId()) postID) {
+  async getPost(@Res() res:any, @Param('postID', new ValidateObjectId()) postID:any) {
     const post = await this.blogService.getPost(postID);
     if (!post) throw new NotFoundException('No post Found');
     return res.status(HttpStatus.OK).json(post);
@@ -39,7 +39,7 @@ export class BlogController {
 
   // Get all posts
   @Get('posts')
-  async getPosts(@Res() res) {
+  async getPosts(@Res() res:any) {
     const posts = await this.blogService.getPosts();
     return res.status(HttpStatus.OK).json(posts);
   }
@@ -47,7 +47,7 @@ export class BlogController {
   // Edit a post using a specific Id
   @Put('/edit')
   async editPost(
-    @Res() res,
+    @Res() res:any,
     @Query('postID', new ValidateObjectId()) postID:string,
     @Body() createPostDTO: CreatePostDTO,
   ) {
@@ -62,7 +62,7 @@ export class BlogController {
   }
 
   @Delete('/delete')
-  async deletePost(@Res() res, @Query('postID', new ValidateObjectId()) postID) {
+  async deletePost(@Res() res:any, @Query('postID', new ValidateObjectId()) postID: any) {
     const deletedPost = await this.blogService.deletePost(postID);
     if (!deletedPost) {
         throw new NotFoundException('Post does not exist!');

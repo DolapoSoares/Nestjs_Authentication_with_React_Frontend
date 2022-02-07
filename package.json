@@ -26,6 +26,8 @@
     "@nestjs/mongoose": "^9.0.2",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/typeorm": "^8.0.3",
+    "axios": "^0.25.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express-jwt": "^6.1.0",
     "jwks-rsa": "^2.0.5",
@@ -75,5 +77,6 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "proxy": "http://localhost:8000"
 }
