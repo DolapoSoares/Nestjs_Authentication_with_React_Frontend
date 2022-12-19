@@ -30,7 +30,7 @@ ex. [@SoaresDolapo](https://www.linkedin.com/in/dolapo-soares-74b260121/)
 * 0.1
     * Initial Release
 ## About Project
-This project is a task assigned to me by Max.ng for a junior software engineer role
+This project is a task assigned to me by Max.ng for a software engineer role
 ## Acknowledgments
 Inspiration, code snippets, etc.
 * [nestjs-documentation](https://docs.nestjs.com/)
